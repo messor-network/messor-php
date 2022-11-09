@@ -1,0 +1,207 @@
+[*] Start messor sync at 01.01.70 03:00
+ Server:0 https://nl.messor.io/messor/	 [ ok ]
+ Server:1 https://us.messor.us/messor/	 [ ok ]
+ Server:2 https://sg.messor.net/messor/	 [ ok ]
+ 3 servers checked at 3.79 second.
+ 3 servers response ok 
+You have last version of server list: 122b35f8a68caaca15fedb565aafb982a190153c127c6349e2ee68658be1cc66
+You have old version of messor last version is 1.1.0
+Start upgrade.
+Attention new version (1.1.0) of Messor is available!
+To update, download the new version from the link:
+GitHub
+https://github.com/messor-network/messor-opencart
+Messor
+https://opencart.messor.network/messor1.1.0.ocmod.zip
+OpenCart
+https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=42800 Write info on file /var/www/html/Messor/test/messor-kernel/messor/data/update.txt
+[*] Start messor sync at 01.01.70 03:00
+ Server:0 https://nl.messor.io/messor/	 [ ok ]
+ Server:1 https://us.messor.us/messor/	 [ ok ]
+ Server:2 https://sg.messor.net/messor/	 [ ok ]
+ 3 servers checked at 3.79 second.
+ 3 servers response ok 
+You have last version of server list: 122b35f8a68caaca15fedb565aafb982a190153c127c6349e2ee68658be1cc66
+You have old version of messor last version is 1.1.0
+Start upgrade.
+Attention new version (1.1.0) of Messor is available!
+To update, download the new version from the link:
+GitHub
+https://github.com/messor-network/messor-opencart
+Messor
+https://opencart.messor.network/messor1.1.0.ocmod.zip
+OpenCart
+https://www.opencart.com/index.php?route=marketplace/extension/info&extension_id=42800 Write info on file /var/www/html/Messor/test/messor-kernel/messor/data/update.txt
+You have old version database.
+Your database version:   210122_759bb12bee5a73acf554f334f5da4fa3be6b55b4a6a361feaf9451041d263848
+Actual database version: 080622_5f2a94335eb22d05e45827f8a98fd9676d2c82264319847c2dd2ebd1e6e546a5
+Starting update database....
+Get peer list from: https://nl.messor.io/messor/	 ok. 87 bytes
+Peer list updated success.
+ [ 0 ] https://us.messor.us/messor/
+ [ 1 ] https://sg.messor.net/messor/
+ [ 2 ] https://nl.messor.io/messor/
+
+ Getting 3 download url.
+ Download database ....
+ Download from server https://us.messor.us/messor/
+ Download: 30157 bytes.
+ Save database at: /var/www/html/Messor/test/messor-kernel/messor/data/database/080622_5f2a94335eb22d05e45827f8a98fd9676d2c82264319847c2dd2ebd1e6e546a5
+ Hash  sum: 5f2a94335eb22d05e45827f8a98fd9676d2c82264319847c2dd2ebd1e6e546a5
+ Valid sum: 5f2a94335eb22d05e45827f8a98fd9676d2c82264319847c2dd2ebd1e6e546a5
+ Download success hash sum valid.
+ Update database version to: 080622_5f2a94335eb22d05e45827f8a98fd9676d2c82264319847c2dd2ebd1e6e546a5 success!
+Read database	1136 ip
+Generate files iptables/htaccess/iplist
+ Remove old database /var/www/html/Messor/test/messor-kernel/messor/data/database/210122_759bb12bee5a73acf554f334f5da4fa3be6b55b4a6a361feaf9451041d263848	[error]
+Check permission or remove old database manual /var/www/html/Messor/test/messor-kernel/messor/data/database/210122_759bb12bee5a73acf554f334f5da4fa3be6b55b4a6a361feaf9451041d263848
+[*] End work, worked time 7.69 second
+
+
+[*] Start messor sync at 01.01.70 00:00
+ Server:0 https://nl.messor.io/messor/	 [ ok ]
+ Server:1 https://us.messor.us/messor/	 [ ok ]
+ Server:2 https://sg.messor.net/messor/	 [ ok ]
+ 3 servers checked at 3.72 second.
+ 3 servers response ok 
+You have last version of server list: 122b35f8a68caaca15fedb565aafb982a190153c127c6349e2ee68658be1cc66
+You have last version of messor: 2.1
+Read data for sync from file /home/archik/Project/wood-messor/universal-messor/messor-universal/msr232/messor-kernel/messor/data/sync.txt 1 bytes.
+Send data on server....
+ Sync:0 https://nl.messor.io/messor/	  [ OK ] - Nothing to sync
+Synchronization success full.
+File archive updated success.
+File sync clean success.
+[*] Start messor sync at 01.01.70 00:00
+ Server:0 https://nl.messor.io/messor/	 [ ok ]
+ Server:1 https://us.messor.us/messor/	 [ ok ]
+ Server:2 https://sg.messor.net/messor/	 [ ok ]
+ 3 servers checked at 3.72 second.
+ 3 servers response ok 
+You have last version of server list: 122b35f8a68caaca15fedb565aafb982a190153c127c6349e2ee68658be1cc66
+You have last version of messor: 2.1
+Read data for sync from file /home/archik/Project/wood-messor/universal-messor/messor-universal/msr232/messor-kernel/messor/data/sync.txt 1 bytes.
+Send data on server....
+ Sync:0 https://nl.messor.io/messor/	  [ OK ] - Nothing to sync
+Synchronization success full.
+File archive updated success.
+File sync clean success.
+You have old version database.
+Your database version:   080622_5f2a94335eb22d05e45827f8a98fd9676d2c82264319847c2dd2ebd1e6e546a5
+Actual database version: 131022_69d807f12421c5a8fcf5bb6c1792870cd5ce665c547c4630d055651a2216d820
+Starting update database....
+Get peer list from: https://nl.messor.io/messor/	 ok. 1042 bytes
+Peer list updated success.
+ [ 0 ] https://prodlas.com/index.php?route=extension/module/messor/requestToPeer&key=c8204c43f4903bf0609365eb2f15b6f43bd16c272294fe8a65c16e2a2814aac6
+ [ 1 ] https://intermarketuk.co.uk/index.php?route=extension/module/messor/requestToPeer&key=bfc589785c5efed1f360b09e9a8201b4a090e005b0dc06ea136f11778a53766d
+ [ 2 ] https://encantohair.co.uk/index.php?route=extension/module/messor/requestToPeer&key=0d5c03014b5bf0c7079ea6b17805151e6e00efe1d6592625458217823c32235a
+ [ 3 ] https://kompsis.lt/index.php?route=extension/module/messor/requestToPeer&key=8a395c33db4324485ffd59f9d6a51696e7a332236226ab49f0ce893335febc91
+ [ 4 ] https://cak-medequip.com/index.php?route=extension/module/messor/requestToPeer&key=d2d8ae7a0688221602504313f3ab2a20498c2794d3a988bacdc4032ebf1ca9e8
+ [ 5 ] https://www.shorelinepetroleum.com/index.php?route=extension/module/messor/requestToPeer&key=994568b811ebf4b66f67ac0c531813b5d8e2bebc0eb053cbfc1798a7495b0b4a
+ [ 6 ] https://www.insandouts.co.za/index.php?route=extension/module/messor/requestToPeer&key=a66055f3ebfef748e4c0d392fdd42522c6f9a34309d15369570bdf7b7b8eecac
+
+ Getting 7 download url.
+ Download database ....
+ Download from peer https://prodlas.com/index.php?route=extension/module/messor/requestToPeer&key=c8204c43f4903bf0609365eb2f15b6f43bd16c272294fe8a65c16e2a2814aac6
+ Download: 36668 bytes.
+ Save database at: /home/archik/Project/wood-messor/universal-messor/messor-universal/msr232/messor-kernel/messor/data/database/131022_69d807f12421c5a8fcf5bb6c1792870cd5ce665c547c4630d055651a2216d820
+ Hash  sum: 69d807f12421c5a8fcf5bb6c1792870cd5ce665c547c4630d055651a2216d820
+ Valid sum: 69d807f12421c5a8fcf5bb6c1792870cd5ce665c547c4630d055651a2216d820
+ Download success hash sum valid.
+ Update database version to: 131022_69d807f12421c5a8fcf5bb6c1792870cd5ce665c547c4630d055651a2216d820 success!
+Read database	1424 ip
+Generate files iptables/htaccess/iplist
+ Remove old database /home/archik/Project/wood-messor/universal-messor/messor-universal/msr232/messor-kernel/messor/data/database/080622_5f2a94335eb22d05e45827f8a98fd9676d2c82264319847c2dd2ebd1e6e546a5	[ok]
+[*] End work, worked time 6.17 second
+
+
+[*] Start messor sync at 01.01.70 00:00
+ Server:0 https://nl.messor.io/messor/	 [ ok ]
+ Server:1 https://us.messor.us/messor/	 [ ok ]
+ Server:2 https://sg.messor.net/messor/	 [ ok ]
+ 3 servers checked at 3.84 second.
+ 3 servers response ok 
+You have last version of server list: 122b35f8a68caaca15fedb565aafb982a190153c127c6349e2ee68658be1cc66
+You have last version of messor: 2.1
+[*] Start messor sync at 01.01.70 00:00
+ Server:0 https://nl.messor.io/messor/	 [ ok ]
+ Server:1 https://us.messor.us/messor/	 [ ok ]
+ Server:2 https://sg.messor.net/messor/	 [ ok ]
+ 3 servers checked at 3.84 second.
+ 3 servers response ok 
+You have last version of server list: 122b35f8a68caaca15fedb565aafb982a190153c127c6349e2ee68658be1cc66
+You have last version of messor: 2.1
+You have old version database.
+Your database version:   131022_69d807f12421c5a8fcf5bb6c1792870cd5ce665c547c4630d055651a2216d820
+Actual database version: 141022_403be91de84d5b4d4ba5541df4a4c248d57ad49ec70694528d3da14dde594925
+Starting update database....
+Get peer list from: https://nl.messor.io/messor/	 ok. 1474 bytes
+Peer list updated success.
+ [ 0 ] https://prodlas.com/index.php?route=extension/module/messor/requestToPeer&key=c8204c43f4903bf0609365eb2f15b6f43bd16c272294fe8a65c16e2a2814aac6
+ [ 1 ] https://kompsis.lt/index.php?route=extension/module/messor/requestToPeer&key=8a395c33db4324485ffd59f9d6a51696e7a332236226ab49f0ce893335febc91
+ [ 2 ] https://shop.kriatini.com/index.php?route=extension/module/messor/requestToPeer&key=b539d9412f7df2f5cbf6184262b76d75fdd3b95f551ba2afc8c11b9244b18055
+ [ 3 ] https://intermarketuk.co.uk/index.php?route=extension/module/messor/requestToPeer&key=bfc589785c5efed1f360b09e9a8201b4a090e005b0dc06ea136f11778a53766d
+ [ 4 ] https://cak-medequip.com/index.php?route=extension/module/messor/requestToPeer&key=d2d8ae7a0688221602504313f3ab2a20498c2794d3a988bacdc4032ebf1ca9e8
+ [ 5 ] https://myhalf.site/index.php?route=extension/module/messor/requestToPeer&key=d452cc0f6546c98f427e48df1406dfac396a759d8b2cba688d414b0377bf20b9
+ [ 6 ] https://utility.aiod.in/index.php?route=extension/module/messor/requestToPeer&key=a2bf0c8aca58496bf2d66c132816cb611c217b94a0045775964781df2f3f299c
+ [ 7 ] https://pastrydreams.eu/index.php?route=extension/module/messor/requestToPeer&key=a75bf2139fb40e685d1b40a5353a64d2486e1da39faf829bb5c2f0f84920ab88
+ [ 8 ] https://www.laymari.com/index.php?route=extension/module/messor/requestToPeer&key=04a34b57fa7dce2390acacde749fc9b4272ded8bb55e38639a09126c7ee15f83
+ [ 9 ] https://www.shorelinepetroleum.com/index.php?route=extension/module/messor/requestToPeer&key=994568b811ebf4b66f67ac0c531813b5d8e2bebc0eb053cbfc1798a7495b0b4a
+
+ Getting 10 download url.
+ Download database ....
+ Download from peer https://prodlas.com/index.php?route=extension/module/messor/requestToPeer&key=c8204c43f4903bf0609365eb2f15b6f43bd16c272294fe8a65c16e2a2814aac6
+ Download: 36972 bytes.
+ Save database at: /home/archik/Project/wood-messor/universal-messor/messor-universal/msr232/messor-kernel/messor/data/database/141022_403be91de84d5b4d4ba5541df4a4c248d57ad49ec70694528d3da14dde594925
+ Hash  sum: 403be91de84d5b4d4ba5541df4a4c248d57ad49ec70694528d3da14dde594925
+ Valid sum: 403be91de84d5b4d4ba5541df4a4c248d57ad49ec70694528d3da14dde594925
+ Download success hash sum valid.
+ Update database version to: 141022_403be91de84d5b4d4ba5541df4a4c248d57ad49ec70694528d3da14dde594925 success!
+Read database	1445 ip
+Generate files iptables/htaccess/iplist
+ Remove old database /home/archik/Project/wood-messor/universal-messor/messor-universal/msr232/messor-kernel/messor/data/database/131022_69d807f12421c5a8fcf5bb6c1792870cd5ce665c547c4630d055651a2216d820	[ok]
+[*] End work, worked time 5.78 second
+
+
+[*] Start messor sync at 01.01.70 00:00
+ Server:0 https://nl.messor.io/messor/	 [ ok ]
+ Server:1 https://us.messor.us/messor/	 [ ok ]
+ Server:2 https://sg.messor.net/messor/	 [ ok ]
+ 3 servers checked at 8.63 second.
+ 3 servers response ok 
+You have last version of server list: 122b35f8a68caaca15fedb565aafb982a190153c127c6349e2ee68658be1cc66
+You have last version of messor: 2.1
+[*] Start messor sync at 01.01.70 00:00
+ Server:0 https://nl.messor.io/messor/	 [ ok ]
+ Server:1 https://us.messor.us/messor/	 [ ok ]
+ Server:2 https://sg.messor.net/messor/	 [ ok ]
+ 3 servers checked at 8.63 second.
+ 3 servers response ok 
+You have last version of server list: 122b35f8a68caaca15fedb565aafb982a190153c127c6349e2ee68658be1cc66
+You have last version of messor: 2.1
+You have old version database.
+Your database version:   141022_403be91de84d5b4d4ba5541df4a4c248d57ad49ec70694528d3da14dde594925
+Actual database version: 171022_91f02799c8b639ff7f7938571a7f776d000befe905a6401af49b41b4b50d81e2
+Starting update database....
+Get peer list from: https://nl.messor.io/messor/	 ok. 229 bytes
+Peer list updated success.
+ [ 0 ] https://myhalf.biz/index.php?route=extension/module/messor/requestToPeer&key=e7082b639fa46aabe359cff00b5b2bfb412fbc104ef685ee0f3bc73b8036499e
+ [ 1 ] https://us.messor.us/messor/
+ [ 2 ] https://nl.messor.io/messor/
+ [ 3 ] https://sg.messor.net/messor/
+
+ Getting 4 download url.
+ Download database ....
+ Download from peer https://myhalf.biz/index.php?route=extension/module/messor/requestToPeer&key=e7082b639fa46aabe359cff00b5b2bfb412fbc104ef685ee0f3bc73b8036499e
+ Download: 34823 bytes.
+ Save database at: /home/archik/Project/wood-messor/universal-messor/messor-universal/messor-kernel/messor/data/database/171022_91f02799c8b639ff7f7938571a7f776d000befe905a6401af49b41b4b50d81e2
+ Hash  sum: 91f02799c8b639ff7f7938571a7f776d000befe905a6401af49b41b4b50d81e2
+ Valid sum: 91f02799c8b639ff7f7938571a7f776d000befe905a6401af49b41b4b50d81e2
+ Download success hash sum valid.
+ Update database version to: 171022_91f02799c8b639ff7f7938571a7f776d000befe905a6401af49b41b4b50d81e2 success!
+Read database	1340 ip
+Generate files iptables/htaccess/iplist
+ Remove old database /home/archik/Project/wood-messor/universal-messor/messor-universal/messor-kernel/messor/data/database/141022_403be91de84d5b4d4ba5541df4a4c248d57ad49ec70694528d3da14dde594925	[ok]
+[*] End work, worked time 10.19 second
+
+
