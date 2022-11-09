@@ -364,7 +364,7 @@ trait FileSystemControl
         $data['user_token'] = $this->getUserToken();
 
         if (!$FSControll) {
-            $data['link'] = "https://messor.network/upgrade/OpenCart/#FsControll";
+            $data['link'] = "https://messor.network/upgrade/php/#FsControll";
             $this->responseOutput("upgrade", $data);
             return;
         }
@@ -484,7 +484,7 @@ trait FileDatabaseBackup
         $data['user_token'] = $this->getUserToken();
 
         if (!$FDBBackup) {
-            $data['link'] = "https://messor.network/upgrade/OpenCart/#BackUp";
+            $data['link'] = "https://messor.network/upgrade/php/#BackUp";
             $this->responseOutput("upgrade", $data);
             return;
         }
@@ -586,7 +586,7 @@ trait MalwareClean
         $data['user_token'] = $this->getUserToken();
 
         if (!$MCleaner) {
-            $data['link'] = "https://messor.network/upgrade/OpenCart/#MalwareCleaner";
+            $data['link'] = "https://messor.network/upgrade/php/#MalwareCleaner";
             $this->responseOutput("upgrade", $data);
             return;
         }
