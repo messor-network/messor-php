@@ -1126,9 +1126,11 @@ final class MessorLib
     {
         if ($type == "white") {
             File::clear(PATH::WHITE_LIST);
+            if (empty($list)) return true;
             return (File::write(Path::WHITE_LIST, Parser::toSettingArray($list)));
         } else {
             File::clear(PATH::DETECT_LIST);
+            if (empty($list)) return true;
             return (File::write(Path::DETECT_LIST, Parser::toSettingArrayTab($list)));
         }
     }
