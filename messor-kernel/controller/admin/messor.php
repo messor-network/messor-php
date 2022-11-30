@@ -32,8 +32,8 @@ class ControllerAdmin
             $this->registerPage();
             return;
         }
-        $this->addStyle(array('chunk-common.29b78882d79f4499.css'));
-        $this->addScript(array('chunk-vendors.d94906ca074f70f5.js', 'chunk-common.29b78882d79f4499.js', 'main.1e17a5ab5f58eb3b.js'));
+        $this->addStyle(array('main.cbecfdbafc57d85d.css', 'chunk-common.e0239a17cf85b8a3.css'));
+        $this->addScript(array('chunk-vendors.f0a482fb58c74411.js', 'chunk-common.e0239a17cf85b8a3.js', 'main.cbecfdbafc57d85d.js'));
 
         $data['scripts'] = $this->getScript();
         $data['style'] = $this->getStyle();
