@@ -1,6 +1,6 @@
 <?php
 
-const DB_HOSTNAME = "127.0.0.1";
-const DB_USERNAME = ""; 
-const DB_PASSWORD = ""; 
-const DB_DATABASE = "";
+const DB_HOSTNAME = "host";
+const DB_USERNAME = "database name"; 
+const DB_PASSWORD = "user password"; 
+const DB_DATABASE = "userl login";

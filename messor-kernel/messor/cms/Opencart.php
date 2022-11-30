@@ -123,7 +123,11 @@ trait Opencart
     public function getLinkApi($path)
     {
         $url = parse_url($this->getUrl());
-        return $url['scheme'] . '://' . $url['host'] . $url['path'] . '?extension/module/messor/' . $path;
+        if (strpos($path, "extension/module/messor/") !== false) {
+            return $url['scheme'] . '://' . $url['host'] . $url['path'] . '?route=' . $path;
+        } else {
+            return $url['scheme'] . '://' . $url['host'] . $url['path'] . '?extension/module/messor/' . $path;
+        }
     }
 
     public function getUrlLink($route, $data = null, $tokenFlag = true)
@@ -181,6 +185,7 @@ trait Opencart
 
     public function redirect($route)
     {
+        header('Location:'.$route);
     }
 
     public function getRequestGet($item)

@@ -75,6 +75,8 @@ class ControllerCatalog
         
         if ($systemSetting['cloudflare'] == 1) {
             $ip = $this->adapter->MessorLib->getIP(true);
+        } else {
+            $ip = $this->adapter->MessorLib->getIP();
         }
 
          if ($setting['lock'] == "js_unlock") {
@@ -97,7 +99,7 @@ class ControllerCatalog
         $route = $this->getUrlLink('hashJs', null, false);
         $url = $this->getUrl();
 
-        if ($this->isImage) return;
+        if ($this->isImage()) return;
         
         static $flag = '';
         $resp = $this->getRoute();
