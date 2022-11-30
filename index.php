@@ -46,6 +46,7 @@ if (!empty($post['password']) && !empty($post['login'] && $route == 'Login')) {
         echo json_encode(array('status' => 'Error', 'data' => array('location' => $routeUrl)));
         return;
     } else {
+        sleep(rand(2,5));
         header('Content-Type: application/json; charset=utf-8');
         echo json_encode(array('status' => 'Error', 'data' => array('text' => 'No wrong password or login')));
         return;
