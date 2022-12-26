@@ -41,6 +41,11 @@ trait Opencart
         return 2.1;
     }
 
+    public function getCMS()
+    {
+        return "no cms";
+    }
+
     public function getUserCMS()
     {
     }
