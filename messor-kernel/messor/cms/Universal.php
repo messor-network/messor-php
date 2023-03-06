@@ -8,7 +8,7 @@ use main\MessorLib;
  * Трейт для взаимодействия Messor c Opencart CMS
  * интерфейсно-независимым способом
  */
-trait Opencart
+trait Universal
 {
     private $pathToPeer = "extension/module/messor/requestToPeer";
 
@@ -56,11 +56,7 @@ trait Opencart
 
     public function moveDirectoryStorage()
     {
-        if (DIR_STORAGE == DIR_SYSTEM . 'storage/' ||  DIR_STORAGE == null) {
-            return true;
-        } elseif (!defined(DIR_STORAGE)) {
-            return false;
-        }
+        
     }
 
     public function getDBUserName()
@@ -70,30 +66,7 @@ trait Opencart
 
     public function checkLastVersionCMS()
     {
-        $versionCurrent = VERSION;
-        $url = "https://github.com/opencart/opencart/releases/latest";
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_HEADER, true);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        $a = curl_exec($ch);
-        curl_close($ch);
-        $headers = explode("\n", $a);
-        $version = '';
-        foreach ($headers as $item) {
-            if (strpos($item, "location:") !== false) {
-                $match = trim(str_replace("Location:", "", $item));
-                $match = explode('/', $match);
-                $version = end($match);
-                break;
-            }
-        }
-        if ($versionCurrent != $version) {
-            return array(true, $version);
-        } else {
-            return array(false, $version);;
-        }
+        
     }
 
     public function getConfigFileName()
@@ -103,17 +76,17 @@ trait Opencart
 
     public function getDBPrefix()
     {
-        return DB_PREFIX;
+        
     }
 
     public function getDBPrefixForCMS()
     {
-        return "oc_";
+        
     }
 
     public function getPathInstallDir()
     {
-        return dirname(DIR_APPLICATION) . '/install';
+        
     }
 
     public function getUserNameAndEmail()

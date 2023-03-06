@@ -2,6 +2,7 @@
 
 use main\Adapter;
 use cms\Opencart;
+use cms\Universal;
 use messor\Autoloader;
 use src\Config\Path;
 use src\Utils\File;
@@ -10,7 +11,7 @@ use src\Request\Client\Client;
 
 class ControllerCatalog
 {
-    use Opencart;
+    use Universal;
 
     private $MessorLib;
     private $adapter;
@@ -43,9 +44,10 @@ class ControllerCatalog
             }
         }
 
-        if ($this->adapter->MessorLib->checkUpdateDay($hour = 26, PATH::DAY)) {
+        if ($this->adapter->MessorLib->checkUpdateDay($hour = 24, PATH::DAY)) {
             $this->adapter->MessorLib->deleteAllHashIP();
             $this->adapter->MessorLib->deleteScoresDetect();
+            $this->adapter->MessorLib->deleteScoresAllow();
             $this->adapter->MessorLib->updateClient();
             File::clear(PATH::DAY);
         }
@@ -76,7 +78,7 @@ class ControllerCatalog
         if ($systemSetting['cloudflare'] == 1) {
             $ip = $this->adapter->MessorLib->getIP(true);
         } else {
-            $ip = $this->adapter->MessorLib->getIP();
+            $ip = $this->adapter->MessorLib->getIP(false);
         }
 
          if ($setting['lock'] == "js_unlock") {
@@ -88,6 +90,7 @@ class ControllerCatalog
         if ($this->adapter->MessorLib->checkUpdateDay($hour = 26, PATH::DAY)) {
             $this->adapter->MessorLib->deleteAllHashIP();
             $this->adapter->MessorLib->deleteScoresDetect();
+            $this->adapter->MessorLib->deleteScoresAllow();
             $this->adapter->MessorLib->updateClient();
             File::clear(PATH::DAY);
         }

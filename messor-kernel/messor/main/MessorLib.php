@@ -28,6 +28,9 @@ use modules\securitysettings\SecuritySettings;
  */
 final class MessorLib
 {
+    private $http;
+    private $toServer;
+
     public function __construct()
     {
         $this->http = new HttpRequest();
@@ -82,6 +85,14 @@ final class MessorLib
         return Parser::toArray(File::read(PATH::PEER_LOG));
     }
 
+    public function notifyOnServer($type, $level, $result)
+    {
+        $servers = $this->getServers();
+        $this->toServer->request->setServer($servers[0][0]);
+        $response = $this->toServer->peerNotify($type, $level, $result);
+        return $response->getResponseData();
+    }
+
     /**
      * Returns information about a peer from a file
      *
@@ -104,22 +115,6 @@ final class MessorLib
         $response = $this->toServer->info();
         File::clear(PATH::INFO);
         File::write(PATH::INFO, Parser::toSettingArray($response->getResponseData()));
-        return $response->getResponseData();
-    }
-
-    public function getAboutPeerOptionsOfServer()
-    {
-        $servers = $this->getServers();
-        $server = new toServer($servers[0][0]);
-        $response = $server->peerOptions();
-        return $response->getResponseData();
-    }
-
-    public function notifyOnServer($type, $level, $result)
-    {
-        $servers = $this->getServers();
-        $this->toServer->request->setServer($servers[0][0]);
-        $response = $this->toServer->peerNotify($type, $level, $result);
         return $response->getResponseData();
     }
 
@@ -233,9 +228,9 @@ final class MessorLib
     public function getListSynchronization($tab = false)
     {
         if (!$tab) {
-            return $this->listSync = Parser::toArray(File::read(Path::SYNC_LIST));
+            return Parser::toArray(File::read(Path::SYNC_LIST));
         } else {
-            return $this->listSync = Parser::toArrayTab(Parser::toArray(File::read(Path::SYNC_LIST)));
+            return Parser::toArrayTab(Parser::toArray(File::read(Path::SYNC_LIST)));
         }
     }
 
@@ -249,9 +244,9 @@ final class MessorLib
     public function getListArchive($tab = false)
     {
         if (!$tab) {
-            return $this->listArchive = Parser::toArray(File::read(Path::ARCHIVE));
+            return Parser::toArray(File::read(Path::ARCHIVE));
         } else {
-            return $this->listArchive = Parser::toArrayTab(Parser::toArray(File::read(Path::ARCHIVE)));
+            return Parser::toArrayTab(Parser::toArray(File::read(Path::ARCHIVE)));
         }
     }
 
@@ -782,7 +777,9 @@ final class MessorLib
         $files = scandir(PATH::IPHASH);
         foreach ($files as $file) {
             if (!is_dir($file)) {
-                unlink(PATH::IPHASH . $file);
+                if (file_exists(PATH::IPHASH . $file) && $file != "index.php") {
+                    unlink(PATH::IPHASH . $file);
+                }
             }
         }
     }
@@ -1079,7 +1076,7 @@ final class MessorLib
     public function searchIP($list, $ip, $type)
     {
         foreach ($list as $key => $value) {
-            if ($type = 'black') {
+            if ($type == 'black') {
                 if ($value['ip'] == $ip) {
                     $list = array($value['ip'] => $value['day']);
                     return $list;
@@ -1126,11 +1123,9 @@ final class MessorLib
     {
         if ($type == "white") {
             File::clear(PATH::WHITE_LIST);
-            if (empty($list)) return true;
             return (File::write(Path::WHITE_LIST, Parser::toSettingArray($list)));
         } else {
             File::clear(PATH::DETECT_LIST);
-            if (empty($list)) return true;
             return (File::write(Path::DETECT_LIST, Parser::toSettingArrayTab($list)));
         }
     }
@@ -1351,8 +1346,16 @@ final class MessorLib
             $config['Encryption_key'] = $dataResponse['encryption_key'];
             $config['Mess_salt'] = Random::Rand(9, rand(9, 18), 'luds');
             $config['Admin_login'] = $this->http->post('admin_login');
-            $config['Admin_password'] = $this->messPasswordHash($this->http->post('admin_password'));
-            $config['Language'] = $this->http->post('language');
+            if ($this->http->post('admin_password')) {
+                $config['Admin_password'] = $this->messPasswordHash($this->http->post('admin_password'));
+            } else {
+                $config['Admin_password'] = '';
+            }
+            if ($this->http->post('language')) {
+                $config['language'] = $this->messPasswordHash($this->http->post('language'));
+            } else {
+                $config['language'] = '';
+            }
             $config['Useragent'] = "Messor client 1b";
 
             File::clear(Path::INFO);
@@ -1373,12 +1376,12 @@ final class MessorLib
     }
 
     public function messPasswordHash($string)
-{
-    $hash = sha1($string) . md5($string) . sha1($string);
-    $hash = hash('sha512', $hash);
-    $hash = hash('sha256', $hash);
-    return $hash;
-}
+    {
+        $hash = sha1($string) . md5($string) . sha1($string);
+        $hash = hash('sha512', $hash);
+        $hash = hash('sha256', $hash);
+        return $hash;
+    }
 
     public function getLicenses()
     {
@@ -1414,7 +1417,7 @@ final class MessorLib
     }
 
     /** @return FSControll */
-    public function FSControll($currentThis)
+    public function FSControll($currentThis = null)
     {
         try {
             $FSControll = new FSControll($currentThis);
@@ -1425,7 +1428,7 @@ final class MessorLib
     }
 
     /** @return FDBBackup */
-    public function FDBBackup($currentThis)
+    public function FDBBackup($currentThis = null)
     {
         try {
             $FDBBackup = new FDBBackup($currentThis);
@@ -1436,7 +1439,7 @@ final class MessorLib
     }
 
     /** @return MCleaner */
-    public function MCleaner($path, $currentThis)
+    public function MCleaner($path = null, $currentThis = null)
     {
         try {
             $MCleaner = new MCleaner($path, $currentThis);
