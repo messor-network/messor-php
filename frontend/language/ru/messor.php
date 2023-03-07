@@ -115,6 +115,7 @@ $_['i_button_traffic_analyzer']  = 'Эта опция  включает сист
 
 $_['i_button_ddos']  = 'При включении данной опции будут заблокированы все автоматические действия, роботы и другая подозрительна активность.
                                     Каждый посетитель будет проверяться перед тем, как получит доступ к сайту.';
+$_['i_button_lock_settings_block_ddos']  = 'Дополнительные настройки блокировки доступны только при отключенной опции блокировки DDoS.';
 
 
 // Statistic
@@ -279,6 +280,7 @@ $_['backup_path']                      = 'Путь';
 $_['backup_descript']                  = 'Создание бекапа файловой системы или базы данных';
 $_['backup_file']                      = 'Бэкап ФС';
 $_['backup_database']                  = 'Бэкап базы данных';
+$_['backup_file_database']             = 'Бэкап ФС+базы данных';
 $_['backup_button_database']           = 'Бэкап';
 $_['backup_setting_professional']      = 'Профессиональные настройки';
 $_['backup_archiving_setting']         = 'Настройки архивации';
@@ -296,6 +298,20 @@ $_['backup_send_of_messor']            = 'Отправить на Messor Server'
 $_['backup_save_on_server']            = 'Сохранить на сервере';
 $_['backup_exclude_directory']         = 'Исключить директории из резервной копии';
 
+// smtp
+
+$_['backup_smtp_settings_host']        = 'Хост';
+$_['backup_smtp_settings_port']        = 'Порт';
+$_['backup_smtp_settings_login']       = 'Логин';
+$_['backup_smtp_settings_password']    = 'Пароль';
+
+//setting
+
+$_['backup_settings_db_setting']       = 'Настройки базы данных';
+$_['backup_settings_name']             = 'Имя';
+$_['backup_settings_host']             = 'Хост';
+$_['backup_settings_user']             = 'Юзер';
+$_['backup_settings_password']         = 'Пароль';
 
 /* File system check */
 
@@ -417,6 +433,12 @@ $_['block_all_attention'] = 'Внимание при включении этой
 $_['block_main_setting_useragent_firewall_block_social'] = 'Блокировать ботов социальных сетей и мессенджеров';
 $_['block_attempts'] = 'попытки';
 $_['block_days'] = 'дни';
+
+// cron
+
+$_['cron_instruction_tooltip'] = 'Добавьте эту задачу в cron';
+
+//universal
 
 $_['login_forgot_your_password'] = 'Забыли пароль';
 $_['login_login_placeholder'] = 'Логин';
